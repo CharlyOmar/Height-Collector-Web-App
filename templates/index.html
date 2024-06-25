@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/main.css">
+    </link>
+    <title>Data Collector App</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Reuniendo EMAIL</h1>
+        <h3>Por favor ingresa tus datos</h3>
+        <div class="message">
+            {{text | safe}}
+        </div>
+        <form action="{{url_for('success')}}" method="POST">
+            <input title="Your email will be safe with us" placeholder="Enter your email address" type="email"
+                name="email_name" required> <br>
+            <input title="Your data will be safe with us" placeholder="Enter your height in cm" type="number" min="50"
+                max="220" step="0.1" name="height_name" required> <br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>
